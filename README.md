@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/matteoantoci-google-forms-mcp-badge.png)](https://mseep.ai/app/matteoantoci-google-forms-mcp)
+
 # Google Forms MCP Server
 
 This MCP server uses the Google Forms API to provide functions such as creating, editing, and retrieving responses for forms.
