@@ -81,6 +81,14 @@ npm run start
 
 6. Restart the Claude desktop app.
 
+### Claude Code Setup
+
+To add this MCP server to Claude Code, run the following command (replace the placeholder values with your actual credentials):
+
+```bash
+claude mcp add-json google-forms-mcp "{\"command\":\"node\",\"args\":[\"<path-to-google-forms-mcp>/build/index.js\"],\"env\":{\"GOOGLE_CLIENT_ID\":\"<your-google-client-id>\",\"GOOGLE_CLIENT_SECRET\":\"<your-google-client-secret>\",\"GOOGLE_REFRESH_TOKEN\":\"<your-google-refresh-token>\"}}"
+```
+
 ## Available Tools
 
 This MCP server provides the following tools:
