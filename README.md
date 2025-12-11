@@ -85,20 +85,41 @@ npm run start
 
 This MCP server provides the following tools:
 
-1. `create_form` - Create a new Google Form
-2. `add_text_question` - Add a text question to the form
-3. `add_multiple_choice_question` - Add a multiple choice question to the form
-4. `get_form` - Get form details
-5. `get_form_responses` - Get form responses
+### Form Management
+- `create_form` - Create a new Google Form
+- `get_form` - Get form details
+- `get_form_responses` - Get form responses
+- `update_form_info` - Update form title and/or description
+
+### Question Types
+- `add_text_question` - Add a text (short answer) question
+- `add_multiple_choice_question` - Add a multiple choice (radio) question
+- `add_checkbox_question` - Add a checkbox (multi-select) question
+- `add_dropdown_question` - Add a dropdown selection question
+- `add_scale_question` - Add a linear scale question (e.g., 1-5 with labels)
+
+### Form Content
+- `add_text_item` - Add a static text/description block
+- `add_section` - Add a section (page break) for better organization
+
+### Question Management
+- `update_question` - Update an existing question's title, description, or required status
+- `delete_question` - Delete a question by its index
+- `move_question` - Move a question to a new position in the form
 
 ## Usage Example
 
 ```
-Create a form and add some questions.
+Create a customer feedback survey with sections, different question types, and a satisfaction scale.
 ```
 
 Claude uses MCP tools like the following to create the form:
 
 1. Use the `create_form` tool to create a new form
-2. Use `add_text_question` or `add_multiple_choice_question` tools to add questions
-3. Display the URL of the created form
+2. Use `update_form_info` to add a description
+3. Use `add_text_item` to add a welcome message
+4. Use `add_section` to organize the form into logical parts
+5. Use various question tools (`add_text_question`, `add_multiple_choice_question`, `add_checkbox_question`, `add_dropdown_question`, `add_scale_question`) to add questions
+6. Use `move_question` to reorder items as needed
+7. Use `update_question` to modify questions if needed
+8. Display the URL of the created form
